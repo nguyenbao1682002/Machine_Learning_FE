@@ -1,0 +1,154 @@
+/* --- CUSTOM SLIDER STYLES --- */
+.sliderContainer {
+    flex-grow: 1;
+    position: relative;
+    height: 30px; /* Chiều cao để bao bọc slider và nhãn */
+    display: flex;
+    align-items: center;
+}
+
+.sliderInput {
+    /* Ẩn input range mặc định và dùng CSS tùy chỉnh */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: transparent;
+    cursor: pointer;
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(-50%);
+    z-index: 2; /* Để nó nằm trên rail */
+}
+
+/* Track (Thanh Ray) */
+.sliderRail {
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+/* Track (Màu từ Min đến Thumb) */
+.sliderTrack {
+    position: absolute;
+    height: 8px;
+    background-color: #3f51b5;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.sliderTrack.critical {
+    background-color: #f44336; /* Đỏ */
+}
+
+
+/* Thumb (Núm kéo) */
+.sliderInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #3f51b5;
+    transition: background .15s ease-in-out;
+    z-index: 3;
+    position: relative;
+}
+
+.sliderInput.critical::-webkit-slider-thumb {
+    border-color: #f44336; /* Đỏ */
+}
+
+/* Value Label (Nhãn nổi) */
+.valueLabel {
+    position: absolute;
+    top: -20px;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    z-index: 4;
+}
+
+/* Min/Max Labels */
+.sliderMarks {
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #666;
+}
+
+/* Vùng safe zone */
+.safetyRange {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: rgba(76, 175, 80, 0.3);
+  border-radius: 4px;
+}
+
+/* Marker ngưỡng */
+.boundaryMarker {
+  position: absolute;
+  top: -20px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.markerLabel {
+  display: block;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 4px;
+  margin-top: 2px;
+}
+
+/* Tam giác nhỏ dưới label */
+.markerTriangle {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid rgba(0, 0, 0, 0.75);
+}
+
+
+/* Input range trong suốt */
+.sliderInput {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  appearance: none;
+  height: 8px;
+  cursor: pointer;
+}
+
+.valueLabel {
+  position: absolute;
+  top: 15px;
+  background: #3f51b5;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}

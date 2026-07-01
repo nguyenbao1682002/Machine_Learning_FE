@@ -1,0 +1,89 @@
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  /* table-layout: fixed; */
+}
+
+.custom-table thead {
+  background-color: #6381b1;
+}
+
+.custom-table th {
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 15px;
+  color: #ffffff;
+  border-bottom: 2px solid #e0e0e0;
+  white-space: nowrap;
+}
+
+.custom-table td {
+  vertical-align: top;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #e6e6e6;
+  line-height: 1.5;
+}
+
+/* Cột thời gian fit content */
+.col-time {
+  white-space: nowrap;
+  width: 100px;
+}
+
+/* Cột trạng thái & SHAP mỗi dòng hiển thị riêng */
+.col-state div,
+.col-shap div {
+  margin-bottom: 2px;
+  white-space: nowrap;
+}
+
+/* Cột đề xuất chia thành 3 dòng */
+.col-recommend div {
+  margin-bottom: 3px;
+  white-space: nowrap;
+}
+
+/* Xen kẽ màu row */
+.custom-table tbody tr:nth-child(even) {
+  background-color: #f9f9fb;
+}
+
+/* Hover */
+.custom-table tbody tr:hover {
+  background-color: #eef3ff;
+  transition: 0.2s ease;
+}
+
+/* Prediction color */
+.predict-stable {
+  color: #0fac63;
+  font-weight: 700;
+}
+
+.predict-unstable {
+  color: #e53935;
+  font-weight: 700;
+}
+
+/* Giải thích text */
+.col-explain {
+  color: #333;
+}
+
+/* ✅ Khi không có dữ liệu */
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  font-style: italic;
+}

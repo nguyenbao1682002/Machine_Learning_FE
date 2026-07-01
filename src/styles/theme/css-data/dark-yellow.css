@@ -1,0 +1,40 @@
+.theme-dark-yellow {
+  /* Common colors */
+  --kc-highlight: #ffad1f;
+  --kc-hover-highlight: rgba(131, 125, 91, 0.4);
+  --kc-highlight-rgb-code: 60, 171, 233;
+  --kc-disabled: #72747588;
+
+  /* Text colors */
+  --text-kc-primary: #ffffff;
+  --text-kc-sub-1: #848998;
+
+  /* Background colors */
+  --bg-kc-primary: #192035;
+  --bg-kc-paper: #252e47;
+  --bg-kc-card: #252e47;
+  --bg-kc-input: #384058;
+
+  /* Box shadow */
+  --box-shadow-primary: 0 3px 5px #192035aa;
+
+  /* Border & Radius */
+  --border-kc-primary: #848998;
+  --rounded-kc-primary: 0.5rem;
+
+  /* Scrollbar */
+  --bg-kc-scrollbar-track: #252e47;
+  --bg-kc-scrollbar-thumb: #888;
+  --bg-kc-scrollbar-thumb__hover: #555;
+
+  /* Alpha color */
+  --bg-kc-alpha-10: rgba(255, 255, 255, 0.1);
+  --bg-kc-alpha-20: rgba(255, 255, 255, 0.2);
+  --bg-kc-alpha-30: rgba(255, 255, 255, 0.3);
+  --bg-kc-alpha-40: rgba(255, 255, 255, 0.4);
+  --bg-kc-alpha-50: rgba(255, 255, 255, 0.5);
+  --bg-kc-alpha-60: rgba(255, 255, 255, 0.6);
+  --bg-kc-alpha-70: rgba(255, 255, 255, 0.7);
+  --bg-kc-alpha-80: rgba(255, 255, 255, 0.8);
+  --bg-kc-alpha-90: rgba(255, 255, 255, 0.9);
+}

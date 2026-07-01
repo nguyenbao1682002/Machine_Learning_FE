@@ -1,0 +1,175 @@
+/* --- STYLES CHO KẾT QUẢ DỰ ĐOÁN --- */
+.headerRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.resultTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.predictionLabel {
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.predictionLabel.unstable {
+    color: #f44336; /* Màu đỏ */
+    border: 1px solid #f44336;
+}
+/* Thêm màu cho trạng thái ổn định (ví dụ) */
+.predictionLabel.stable {
+    color: #4caf50; 
+    border: 1px solid #4caf50;
+}
+
+
+
+/* --- EXPLANATION GRID STYLES --- */
+.stable_result {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+
+    .featureLabel {
+        width: 12%;
+    }
+}
+
+.unstable_result {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    
+    .explain_box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    .shapBar.positive {
+        margin-left: -2.7%;
+    }
+
+    .shapBar.negative {
+        margin-left: -2.7%;
+    }
+} 
+
+/* Giải thích Shap values */
+.explanantionBox {
+    width: flex;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .explanationList{
+        width: flex;
+        height: 100%;
+        /* background: #ebeaea;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 20px 30px; */
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .explanationItem {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 6px;
+        line-height: 1.4;
+        border-radius: 6px;
+        padding: 6px 10px;
+        }
+
+        /* Dòng 1 - Giải thích SHAP */
+        .explanationItem-1 {
+        background: rgba(33, 150, 243, 0.1); /* xanh dương nhạt */
+        color: #1565c0;
+        border-left: 4px solid #2196f3;
+        }
+
+        /* Dòng 2 - Biến bất thường */
+        .explanationItem-2 {
+        background: rgba(244, 67, 54, 0.1); /* đỏ nhạt */
+        color: #d32f2f;
+        border-left: 4px solid #f44336;
+        }
+
+        /* Dòng 3 - Biến ổn định */
+        .explanationItem-3 {
+        background: rgba(76, 175, 80, 0.1); /* xanh lá nhạt */
+        color: #2e7d32;
+        border-left: 4px solid #4caf50;
+        }
+    }
+}
+
+/* Đề xuất từ AI Agent */
+.proposalBox {
+    width: flex;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .proposalSuggestionList {
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 6px;
+        line-height: 1.4;
+        border-radius: 6px;
+        padding: 6px 10px;
+        background: rgba(0, 188, 212, 0.1);
+        color: #00838f;
+        border-left: 4px solid #00bcd4;
+
+        .proposalSuggestionList-text{
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+    }
+
+    .proposalExplanation {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 6px;
+        line-height: 1.4;
+        border-radius: 6px;
+        padding: 6px 10px;
+        background: rgba(0, 188, 212, 0.1);
+        color: #00838f;
+        border-left: 4px solid #00bcd4;
+
+        .proposalExplanationTitle {
+            font-size: 18px;
+            font-weight: 800;
+        }
+    }
+    .proposalSuggestionItem {
+            margin-left: 20px;
+        }
+}
+
+/* Các styles dùng chung */
+.boxTitle {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 800;
+    color: #001f74;
+}

@@ -1,0 +1,141 @@
+.shapChartContainer {
+  width: flex;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.shapTitle {
+  text-align: start;
+  font-size: 20px;
+  font-weight: 800;
+  color: #001f74;
+  margin-bottom: 10px;
+}
+
+.chartArea {
+  position: relative;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.barList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.featureLabel {
+  min-width:160px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: right;
+  color: #444;
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+}
+
+.barTrack {
+  position: relative;
+  flex-grow: 1;
+  height: 30px;
+  background: #f4f4f4;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* === Thanh SHAP === */
+.shapBar {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 5px;
+  transition: all 0.2s ease;
+  transform-origin: left center; /* ⚡ Căn gốc trái */
+}
+
+.shapBar.positive {
+  background: #e74c3c; /* đỏ */
+  margin-left: -3.8%;
+}
+
+/* Khi thanh âm, sẽ dịch sang trái từ tâm 0 */
+.shapBar.negative {
+  background: #3498db;
+  justify-content: flex-start;
+  padding-left: 5px;
+  margin-left: -3.8%;
+
+}
+
+.contributionValue {
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* === Trục X === */
+.xAxis {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  right: 0;
+  height: 20px;
+  border-top: 1px solid #bbb;
+}
+
+.xMark {
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.xGridLine {
+  width: 1px;
+  background: #eee;
+  margin-bottom: 3px;
+}
+
+.xLabel {
+  font-size: 11px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.baseLine {
+  position: absolute;
+  top: -250px;
+  border-radius: 10px;
+  bottom: 40px;
+  width: 3px;
+  background: #222;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.xTitle {
+  font-size: 13px;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+}

@@ -1,0 +1,174 @@
+.model-testing-container {
+    padding: 10px;
+    max-width: calc(100% - 20px);
+    margin: 5px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.config-parameter-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 10px;;
+    margin-bottom: 30px;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+.gridItem {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.paramRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 6px;
+}
+
+.paramLabel {
+    width: 150px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 4px 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.valueDisplay {
+    width: 65px;
+    height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 4px 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #3f51b5;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.valueDisplay.critical {
+    color: red;
+}
+
+/* Nút Dự đoán */
+.predictButton {
+    border: none;
+    margin-top: 30px;
+    align-self: end;
+
+    .custom-btn {
+        padding: 10px 15px;
+        font-size: 16px;
+        font-weight: bolder;
+    }
+}
+
+/* --- POPUP STYLES --- */
+.popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popupContent {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.configRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.configRow input {
+    padding: 8px;
+    width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.configActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cancelButton, .saveButton {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cancelButton {
+    background: #ccc;
+    color: #333;
+}
+
+.saveButton {
+    background: #3f51b5;
+    color: white;
+}
+
+/* --- SLIDER MARKER STYLES --- */
+.configButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0;
+    margin-left: 10px;
+    line-height: 1;
+}
+
+
+.prediction-result-area {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+

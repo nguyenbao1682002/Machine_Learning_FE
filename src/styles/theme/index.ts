@@ -1,0 +1,13 @@
+import './css-data/light-blue.css'
+import './css-data/light-green.css'
+import './css-data/light-orange.css'
+import './css-data/light-purple.css'
+import './css-data/light-red.css'
+import './css-data/light-yellow.css'
+
+import './css-data/dark-blue.css'
+import './css-data/dark-green.css'
+import './css-data/dark-orange.css'
+import './css-data/dark-purple.css'
+import './css-data/dark-red.css'
+import './css-data/dark-yellow.css'

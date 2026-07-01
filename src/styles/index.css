@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --app-height: 100vh;
+}
+
+@layer base {
+  body {
+    @apply m-0 p-0;
+    @apply font-default text-kc-primary;
+    @apply bg-kc-primary;
+  }
+
+  .dialog-screen-default-size {
+    @apply h-full w-full md:h-[70vh] md:max-h-[48rem] md:w-[70vw] md:max-w-4xl;
+  }
+
+  .dialog-screen-lg-size {
+    @apply h-full w-full md:h-[84vh] md:max-h-[60rem] md:w-[75vw] md:max-w-5xl;
+  }
+
+  .dialog-screen-full-size {
+    @apply h-full w-full md:h-[92vh] md:max-h-[92vh] md:w-[75vw] md:max-w-5xl;
+  }
+
+  .dialog-screen-sm-size {
+    @apply h-full w-full md:h-[61vh] md:max-h-[61vh] md:w-[75vw] md:max-w-[50rem];
+  }
+
+  .dialog-screen-thin-size {
+    @apply h-full w-full md:h-[49rem] md:max-h-[49rem] md:w-[47rem] md:max-w-[47rem];
+  }
+
+  .h-screen {
+    height: var(--app-height) !important;
+  }
+
+  .max-h-screen {
+    max-height: var(--app-height) !important;
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+}
+
+/* ::-webkit-scrollbar {
+  width: 10px;
+} */
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+  background: var(--bg-kc-scrollbar-track);
+} */
+
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+  background: var(--bg-kc-scrollbar-thumb);
+} */
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-kc-scrollbar-thumb__hover);
+} */
+
+.clickable {
+  @apply cursor-pointer select-none hover:alpha-5 active:alpha-10;
+}
